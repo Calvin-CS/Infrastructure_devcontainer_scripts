@@ -33,7 +33,7 @@ source /opt/python/bin/activate
 
 # Download requirements.txt and install all of them
 # Note to update the requirements.txt file
-curl -fsSL https://raw.githubusercontent.com/Calvin-CS/Infrastructure_devcontainer/main/scripts/requirements.txt -o /tmp/requirements.txt
+curl -fsSL https://raw.githubusercontent.com/Calvin-CS/Infrastructure_devcontainer_scripts/main/scripts/requirements.txt -o /tmp/requirements.txt
 pip3 install -r /tmp/requirements.txt
 rm -f /tmp/requirements.txt
 deactivate
