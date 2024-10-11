@@ -13,6 +13,7 @@ apt update -y && \
     default-jdk-headless \
     ruby-full \
     maven \
+    pccts \
     && rm -rf /var/lib/apt/lists/*
 
 # clojure misc configuration
