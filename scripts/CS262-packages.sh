@@ -12,13 +12,13 @@ curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | gpg --dearmor -o /u
 curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     apt update -y && \
     apt install -y nodejs && \
-    /usr/bin/npm install -g npm && \
+    /usr/bin/npm install -g npm@latest && \
     /usr/bin/npm install -g express-generator && \
     /usr/bin/npm install -g express && \
     /usr/bin/npm install -g hot-server && \
     /usr/bin/npm install -g jslint && \
     /usr/bin/npm install -g stylus && \
-    /usr/bin/npm install -g expo-cli && \
+    /usr/bin/npm install -g expo && \
     /usr/bin/npm install -g expo/ngrok && \
     /usr/bin/npm install -g expo-dev-menu && \
     /usr/bin/npm install -g typescript && \
