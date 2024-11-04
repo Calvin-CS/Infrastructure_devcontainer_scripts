@@ -18,6 +18,7 @@ apt update -y && \
     libomp5 \
     libomp-dev \
     mpe2 \
+    python3-pexpect \
     && rm -rf /var/lib/apt/lists/*
 
 # mpich alternatives
