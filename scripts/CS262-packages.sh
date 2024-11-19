@@ -22,7 +22,9 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | bash - && \
     /usr/bin/npm install -g expo/ngrok && \
     /usr/bin/npm install -g expo-dev-menu && \
     /usr/bin/npm install -g typescript && \
+    /usr/bin/npm install -g firebase-tools && \
     /usr/bin/npm install -g @angular/cli && \
+    /usr/bin/npm install -g @angular/fire && \
     rm -rf /var/lib/apt/lists/*
 
 # PostgreSQL client
