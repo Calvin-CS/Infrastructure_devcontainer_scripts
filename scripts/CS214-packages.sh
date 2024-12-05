@@ -14,6 +14,7 @@ apt update -y && \
     ruby-full \
     maven \
     pccts \
+    antlr4 \
     && rm -rf /var/lib/apt/lists/*
 
 # clojure misc configuration
