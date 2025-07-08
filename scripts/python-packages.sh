@@ -21,22 +21,29 @@ apt update -y && \
     && rm -rf /var/lib/apt/lists/*
 
 # Python
-apt update -y 
+apt update -y && \
     DEBIAN_FRONTEND=noninteractive apt install -y \
-    python3-pip \
-    python3-venv \
-    && rm -rf /var/lib/apt/lists/* 
+    csanaconda \
+    cspython \
+    && rm -rf /var/lib/apt/lists/*
 
-# Setup a Python virtual environment
-python3 -m venv --symlinks /opt/python
-source /opt/python/bin/activate
+# 2025-07-08 cwieri39 - deprecated in favor of csr package
+# apt update -y 
+#     DEBIAN_FRONTEND=noninteractive apt install -y \
+#     python3-pip \
+#     python3-venv \
+#     && rm -rf /var/lib/apt/lists/* 
 
-# Download requirements.txt and install all of them
-# Note to update the requirements.txt file
-curl -fsSL https://raw.githubusercontent.com/Calvin-CS/Infrastructure_devcontainer_scripts/main/scripts/requirements.txt -o /tmp/requirements.txt
-pip3 install -r /tmp/requirements.txt
-rm -f /tmp/requirements.txt
-deactivate
+# # Setup a Python virtual environment
+# python3 -m venv --symlinks /opt/python
+# source /opt/python/bin/activate
+
+# # Download requirements.txt and install all of them
+# # Note to update the requirements.txt file
+# curl -fsSL https://raw.githubusercontent.com/Calvin-CS/Infrastructure_devcontainer_scripts/main/scripts/requirements.txt -o /tmp/requirements.txt
+# pip3 install -r /tmp/requirements.txt
+# rm -f /tmp/requirements.txt
+# deactivate
 
 # add PYTHONPATH environment variable
 cat >/etc/profile.d/pythonpath.sh <<EOL

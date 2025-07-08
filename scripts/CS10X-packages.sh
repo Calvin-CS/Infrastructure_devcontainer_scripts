@@ -1,6 +1,7 @@
 #!/bin/bash
 
 # Install the common Python virtualenv IF it doesn't already exist
+# 2025-07-08 cwieri39 - install via cspython package
 if [ ! -d "/opt/python" ]; then
   echo "Creating Python virtual environment in /opt/python"
 
