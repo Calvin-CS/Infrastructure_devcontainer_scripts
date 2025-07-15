@@ -79,7 +79,7 @@ EOL
 chmod 0755 /usr/local/scripts/gen-sshkey-github.sh
 ln -s /usr/local/scripts/gen-sshkey-github.sh /usr/local/scripts/gen-sshkey-cs112.sh
 
-cat >/etc/profile.d/cs112-path.sh << EOL
+cat >/etc/profile.d/cs112-path.sh << 'EOL'
 #!/bin/bash
 
 export PATH=$PATH:/usr/local/scripts
