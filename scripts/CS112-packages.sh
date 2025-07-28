@@ -19,6 +19,8 @@ apt update -y && \
     libomp-dev \
     mpe2 \
     python3-pexpect \
+    lldb \
+    liblldb-dev \
     && rm -rf /var/lib/apt/lists/*
 
 # mpich alternatives
