@@ -88,3 +88,6 @@ export PATH=$PATH:/usr/local/scripts
 
 EOL
 chmod 0755 /etc/profile.d/cs112-path.sh
+
+## set gdb permissions
+setcap cap_sys_ptrace+ep /usr/bin/gdb
