@@ -5,6 +5,7 @@ apt update -y && \
     build-essential \
     ddd \
     valgrind \
+    libcap2-bin \
     tsgl \
     bridges-cxx \
     mpich \
