@@ -92,3 +92,6 @@ chmod 0755 /etc/profile.d/cs112-path.sh
 
 ## set gdb permissions
 setcap cap_sys_ptrace+ep /usr/bin/gdb
+
+## bridges cache directory
+mkdir -p /var/cache/xdg/bridges_data/cxx && chmod 0777 /var/cache/xdg/bridges_data/cxx
