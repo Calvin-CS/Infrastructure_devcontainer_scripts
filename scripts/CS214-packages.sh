@@ -35,5 +35,8 @@ apt-add-repository -y ppa:swi-prolog/stable && \
     rm -rf /var/lib/apt/lists/*
 
 # gnat-14 gnatmake-14 to gnatmake alias
-echo "#gnat-14 gnatmake alias" >> /etc/bash.bashrc
-echo "alias gnatmake=\"gnatmake-14\"" >> /etc/bash.bashrc
+# echo "#gnat-14 gnatmake alias" >> /etc/bash.bashrc
+# echo "alias gnatmake=\"gnatmake-14\"" >> /etc/bash.bashrc
+
+# gnat-14 gnatmake update-alternatives
+update-alternatives --install /usr/bin/gnatmake gnatmake /usr/bin/gnatmake-14 100
