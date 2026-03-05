@@ -50,7 +50,7 @@ RUN ln -snf /usr/share/zoneinfo/$TZ /etc/localtime && \
     echo "$TZ" > /etc/timezone
 
 # Add CalvinAD trusted root certificate
-ADD https://raw.githubusercontent.com/Calvin-CS/Infrastructure_configs/main/auth/CalvinCollege-ad-CA.crt /etc/ssl/certs/
+ADD https://cpscadmin.cs.calvin.edu/configs/Infrastructure_configs/auth/CalvinCollege-ad-CA.crt /etc/ssl/certs/
 RUN chmod 0644 /etc/ssl/certs/CalvinCollege-ad-CA.crt && \
     ln -s -f /etc/ssl/certs/CalvinCollege-ad-CA.crt /etc/ssl/certs/ddbc78f4.0
 
