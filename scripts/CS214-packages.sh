@@ -15,6 +15,7 @@ apt update -y && \
     maven \
     pccts \
     antlr4 \
+    python3-pytest \
     && rm -rf /var/lib/apt/lists/*
 
 # clojure misc configuration

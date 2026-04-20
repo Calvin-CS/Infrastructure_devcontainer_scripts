@@ -20,6 +20,7 @@ apt update -y && \
     libomp-dev \
     mpe2 \
     python3-pexpect \
+    python3-pytest \
     lldb \
     liblldb-dev \
     && rm -rf /var/lib/apt/lists/*
