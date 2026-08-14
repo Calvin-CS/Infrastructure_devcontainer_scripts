@@ -99,18 +99,18 @@ mkdir -p /var/cache/xdg/bridges_data/cxx && chmod 0777 /var/cache/xdg/bridges_da
 
 ## gh cli
 # https://github.com/cli/cli/blob/trunk/docs/install_linux.md#debian
-sudo mkdir -p -m 755 /etc/apt/keyrings
+mkdir -p -m 755 /etc/apt/keyrings
 mkdir -p -m 755 /etc/apt/sources.list.d
 # only download the keyring if it doesn't already exist
 if [ ! -f /etc/apt/keyrings/githubcli-archive-keyring.gpg ]; then
     out=$(mktemp) && wget -nv -O$out https://cli.github.com/packages/githubcli-archive-keyring.gpg
-    cat $out | sudo tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null
+    cat $out | tee /etc/apt/keyrings/githubcli-archive-keyring.gpg > /dev/null
     rm -f $out
 fi
 chmod go+r /etc/apt/keyrings/githubcli-archive-keyring.gpg
 # only create the sources list if it doesn't already exist
 if [ ! -f /etc/apt/sources.list.d/github-cli.list ]; then
-    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+    echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | tee /etc/apt/sources.list.d/github-cli.list > /dev/null
 fi
-sudo apt update
-sudo apt install gh -y
+apt update
+apt install gh -y
