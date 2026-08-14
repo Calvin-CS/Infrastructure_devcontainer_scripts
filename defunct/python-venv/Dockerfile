@@ -35,11 +35,9 @@ RUN apt update -y && \
     && rm -rf /var/lib/apt/lists/*
 
 # Install Calvin cpscadmin repo keys
-RUN echo "deb [signed-by=/usr/share/keyrings/csrepo.gpg] http://cpscadmin.cs.calvin.edu/repos/cpsc-ubuntu/ noble main" | tee -a /etc/apt/sources.list.d/cs-ubuntu-software-noble.list && \
-    curl https://cpscadmin.cs.calvin.edu/repos/cpsc-ubuntu/csrepo.asc | tee /tmp/csrepo.asc && \
-    gpg --dearmor /tmp/csrepo.asc && \
-    mv /tmp/csrepo.asc.gpg /usr/share/keyrings/csrepo.gpg && \
-    rm -f /tmp/csrepo.asc
+ADD https://cpscadmin.cs.calvin.edu/repos/cpsc-ubuntu/csrepo.asc /usr/share/keyrings/
+RUN chmod a+r /usr/share/keyrings/csrepo.asc && \
+    echo "deb [signed-by=/usr/share/keyrings/csrepo.asc] http://cpscadmin.cs.calvin.edu/repos/cpsc-ubuntu/ noble main" | tee -a /etc/apt/sources.list.d/cs-ubuntu-software-noble.list
 
 ##################################
 ## Container configuration
